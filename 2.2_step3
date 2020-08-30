@@ -1,0 +1,3 @@
+SELECT genre.name_genre
+FROM genre LEFT JOIN book
+     on genre.genre_id = book.genre_id WHERE book.genre_id IS Null;
