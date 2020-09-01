@@ -1,0 +1,10 @@
+/* Вывести информацию о книгах (жанр, книга, автор), относящихся к жанру, включающему слово «роман» в отсортированном по названиям книг виде. */
+
+SELECT genre.name_genre, book.title, author.name_author
+FROM
+ genre INNER JOIN book
+ ON genre.genre_id = book.genre_id
+       INNER JOIN  author
+       ON author.author_id = book.author_id       
+WHERE genre.name_genre IN('Роман')
+ORDER BY title;
